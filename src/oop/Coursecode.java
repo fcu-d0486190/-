@@ -1,7 +1,7 @@
 package oop;
 
 public class Coursecode {
-	private String[] coursecode = {"1","2","3","4","5"};//¿ï½Ò¥N½X
+	private String[] coursecode = {"1","2","3","4","5"};//é¸èª²ä»£ç¢¼
 	
 	public boolean getcoursecode(String code){
 		boolean found = false;

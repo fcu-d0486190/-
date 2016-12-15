@@ -11,13 +11,13 @@ public class Favorate {
 	int pick;
 	boolean loop = true;
 
-	public void rewitreFavorate() {// ­×§ï§Úªº³Ì·R¤èªk
+	public void rewitreFavorate() {//ä¿®æ”¹æˆ‘çš„æœ€æ„›
 		while (loop) {
-			System.out.println("¬O§_»Ý­×§ïy/n");
+			System.out.println("æ˜¯å¦éœ€è¦ä¿®æ”¹/n");
 			choose = scanner.nextLine();
 			if (choose.equalsIgnoreCase("y")) {
 				display_favorate();
-				System.out.println("¿ï¾Ü¨É§R°£¸¹½X:");
+				System.out.println("é¸æ“‡æƒ³åˆªé™¤è™Ÿç¢¼:");
 				pick = scanner.nextInt();
 				if (getremind() > pick && pick > 0) {
 					for (int i = pick - 1; i < getremind(); i++) {
@@ -27,7 +27,7 @@ public class Favorate {
 					}
 
 				} else {
-					System.out.println("¿é¤J¸¹½X¦³»~");
+					System.out.println("è¼¸å…¥è™Ÿç¢¼æœ‰èª¤");
 				}
 			} else {
 				loop = false;
@@ -35,7 +35,7 @@ public class Favorate {
 		}
 	}
 
-	public boolean getFavorate(String coursuename) {//¥[§Úªº³Ì·R¹Lµ{
+	public boolean getFavorate(String coursuename) {//åŠ æˆ‘çš„æœ€æ„›éŽç¨‹
 		if (remind != 5) {
 			for (int i = 0; i < remind; i++) {
 				if (!(coursuename.equals(favorate[i]))) {
@@ -45,32 +45,32 @@ public class Favorate {
 						continue;
 					}
 				} else {
-					System.out.println("¤w¥[¹L¦¹½Òµ{");
+					System.out.println("å·²åŠ éŽæ­¤èª²ç¨‹");
 					return false;
 				}
 			}
-			System.out.println("¦¨¥\¥[¤J§Úªº³Ì·R");
+			System.out.println("æˆåŠŸåŠ å…¥æˆ‘çš„æœ€æ„›");
 			return true;
 		} else {
-			System.out.println("§Úªº³Ì·R¤wº¡");
+			System.out.println("æˆ‘çš„æœ€æ„›å·²æ»¿");
 			rewitreFavorate();
 		}
 		return false;
 	}
 
-	public void setaddremind() {// ±±¨î¤W­­
+	public void setaddremind() {// æŽ§åˆ¶ä¸Šé™
 		remind++;
 	}
 
-	public void setsubremind() {// ±±¨î¤W­­
+	public void setsubremind() {// æŽ§åˆ¶ä¸Šé™
 		remind--;
 	}
 
-	public int getremind() {// ±±¨î¤W­­
+	public int getremind() {// æŽ§åˆ¶ä¸Šé™
 		return remind;
 	}
 
-	public void display_favorate() {// ¦L¥X§Úªº³Ì·R
+	public void display_favorate() {// å°å‡ºæˆ‘çš„æœ€æ„›
 		for (int i = 0; i < getremind(); i++) {
 			int j = 1;
 			System.out.println(j + "." + favorate[i]);

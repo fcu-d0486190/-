@@ -10,23 +10,23 @@ public class Main {
 		Coursecode code = new Coursecode();
 		Favorate favorate = new Favorate();
 		String coursecode, choose;
-		String course = "°ê¨¾";
+		String course = "åœ‹é˜²";
 		boolean found;
-		coursecode = scanner.nextLine();// ¿é¤J¿ï½Ò¥N½X
+		coursecode = scanner.nextLine();//è¼¸å…¥é¸èª²ä»£ç¢¼
 		if (code.getcoursecode(coursecode)) {
-			System.out.println("Åã¥Ü½Òµ{¸ê°T....");// ³o¸Ì­n¿é¥X¬Û¹ïÀ³ªº½Òµ{
-			System.out.println("¬O§_¥[¤J§Úªº³Ì·R y/n");// ¿ï«h¬O§_­n¥[¤J§Úªº³Ì·R
+			System.out.println("é¡¯ç¤ºèª²ç¨‹è³‡è¨Š");//é€™è£¡è¦è¼¸å‡ºç›¸å°æ‡‰çš„èª²ç¨‹
+			System.out.println("æ˜¯å¦åŠ å…¥æˆ‘çš„æœ€æ„›y/n");//é¸å‰‡æ˜¯å¦åŠ å…¥æˆ‘çš„æœ€æ„›
 			choose = scanner.nextLine();
-			if (choose.equalsIgnoreCase("y")) {//ÀË¬d¬O§_¥[¤J
-				if(favorate.getFavorate(course)){//¦³
-					favorate.setaddremind();//³Ì·R+1
+			if (choose.equalsIgnoreCase("y")) {//æª¢æŸ¥æ˜¯å¦æœ‰åŠ å…¥
+				if(favorate.getFavorate(course)){//æœ‰
+					favorate.setaddremind();//ï¿½æœ€æ„›+1
 				}
 				else{
 					
 				}
 			}
 		} else {
-			System.out.println("µL¦¹¥N½X½Ğ­«·s¿é¤J  http://¬d¸ß¿ï½Òºô§}");
+			System.out.println("ç„¡æ­¤ä»£ç¢¼è«‹é‡æ–°è¼¸å…¥  http://æŸ¥è©¢é¸èª²ç¶²å€");
 		}
 	}
 
